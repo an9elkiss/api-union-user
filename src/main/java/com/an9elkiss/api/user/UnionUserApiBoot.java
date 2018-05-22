@@ -15,9 +15,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.an9elkiss.api.timedo.api, com.an9elkiss.api.timedo.service" })
+@ComponentScan(basePackages = { "com.an9elkiss.api.user.api, com.an9elkiss.api.user.service" })
 @MapperScan("com.an9elkiss.api.timedo.dao")
-public class Swagger2SpringBoot implements CommandLineRunner {
+public class UnionUserApiBoot implements CommandLineRunner {
 
     @Override
     public void run(String... arg0) throws Exception {
@@ -27,7 +27,7 @@ public class Swagger2SpringBoot implements CommandLineRunner {
     }
 
     public static void main(String[] args) throws Exception {
-        new SpringApplication(Swagger2SpringBoot.class).run(args);
+        new SpringApplication(UnionUserApiBoot.class).run(args);
     }
 
     class ExitException extends RuntimeException implements ExitCodeGenerator {
