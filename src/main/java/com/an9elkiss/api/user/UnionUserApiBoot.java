@@ -15,7 +15,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.an9elkiss.api.user.api, com.an9elkiss.api.user.service" })
+@ComponentScan(basePackages = {
+		"com.an9elkiss.api.user.api, com.an9elkiss.api.user.service, com.an9elkiss.commons.util.spring" })
 @MapperScan("com.an9elkiss.api.user.dao")
 public class UnionUserApiBoot implements CommandLineRunner {
 

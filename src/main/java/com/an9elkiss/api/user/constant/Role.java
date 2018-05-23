@@ -32,4 +32,13 @@ public enum Role {
 		return rights;
 	}
 
+	public static Role byId(Integer id) {
+		for(Role role : Role.values()){
+			if(role.getRoleId() == id){
+				return role;
+			}
+		}
+		return null;
+	}
+
 }

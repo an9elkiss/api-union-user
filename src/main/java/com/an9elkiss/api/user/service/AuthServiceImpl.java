@@ -1,21 +1,33 @@
 package com.an9elkiss.api.user.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.api.user.command.UserCmd;
 import com.an9elkiss.api.user.constant.ApiStatus;
+import com.an9elkiss.api.user.constant.Role;
+import com.an9elkiss.api.user.constant.ServiceRights;
 import com.an9elkiss.api.user.dao.UserDao;
+import com.an9elkiss.commons.auth.MenuRights;
+import com.an9elkiss.commons.auth.Principal;
+import com.an9elkiss.commons.auth.Rights;
+import com.an9elkiss.commons.auth.User;
 import com.an9elkiss.commons.command.ApiResponseCmd;
+import com.an9elkiss.commons.constant.RedisKeyPrefix;
+import com.an9elkiss.commons.util.JsonUtils;
 import com.an9elkiss.commons.util.MapUtils;
+import com.an9elkiss.commons.util.spring.RedisUtils;
 
 @Service
 public class AuthServiceImpl implements AuthService {
@@ -24,6 +36,8 @@ public class AuthServiceImpl implements AuthService {
 
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private RedisUtils redisUtils;
 
 	@Override
 	public ApiResponseCmd<TokenCmd> login(String loginName, String password) {
@@ -45,11 +59,35 @@ public class AuthServiceImpl implements AuthService {
 			return new ApiResponseCmd(ApiStatus.LOGIN_FAIL);
 		}
 
+		Principal principal = buildPrincipal(users.get(0));
+		String json = JsonUtils.toString(principal);
 
-		// TODO to redis
 		TokenCmd tokenCmd = TokenCmd.random();
+		redisUtils.setString(RedisKeyPrefix.SESSION + tokenCmd.getToken(), json, 60l, TimeUnit.MINUTES);
 
 		return ApiResponseCmd.success(tokenCmd);
+	}
+
+	private Principal buildPrincipal(UserCmd userCmd) {
+		User user = new User();
+		BeanUtils.copyProperties(userCmd, user);
+
+		List<Rights> rightList = new ArrayList<Rights>();
+
+		Integer roleId = userCmd.getRoleId();
+		Role role = Role.byId(roleId);
+		for (ServiceRights rights : role.getRights()) {
+			if (rights.getTypeId() == MenuRights.TYPE_ID) {
+				MenuRights r = new MenuRights();
+				BeanUtils.copyProperties(rights, r);
+				r.setCode(rights.name());
+				r.setRoleId(role.getRoleId());
+				r.setRoleCode(role.name());
+				rightList.add(r);
+			}
+		}
+
+		return new Principal(user, rightList);
 	}
 
 
