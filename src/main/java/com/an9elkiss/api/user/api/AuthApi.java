@@ -8,7 +8,7 @@ package com.an9elkiss.api.user.api;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.an9elkiss.api.user.api.command.TokenCmd;
+import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.commons.command.ApiResponseCmd;
 
 

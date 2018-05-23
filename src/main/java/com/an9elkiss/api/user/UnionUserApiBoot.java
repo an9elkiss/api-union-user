@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @SpringBootApplication
 @ComponentScan(basePackages = { "com.an9elkiss.api.user.api, com.an9elkiss.api.user.service" })
-@MapperScan("com.an9elkiss.api.timedo.dao")
+@MapperScan("com.an9elkiss.api.user.dao")
 public class UnionUserApiBoot implements CommandLineRunner {
 
     @Override
