@@ -1,10 +1,12 @@
 package com.an9elkiss.api.user.constant;
 
 public enum ServiceRights {
-	MENU_HOME(1,"菜单权限", 1, "首页", 0),
-	MENU_TIME_DOMINATOR(1,"菜单权限", 101, "时间管理", 0),
-	MENU_TIME_ENTRIES(1,"菜单权限", 102, "日程记录", 101),
-	MENU_TIME_ENTRY_CHART(1,"菜单权限", 103, "日程报表", 101);
+	MENU_HOME(1,"菜单权限", 1, "首页", 1, 0),
+	MENU_TIME_DOMINATOR(1,"菜单权限", 101, "时间管理", 1, 0),
+	MENU_TIME_ENTRIES(1,"菜单权限", 102, "日程记录", 2, 101),
+	MENU_TIME_ENTRY_CHART(1, "菜单权限", 103, "日程报表", 2, 101),
+
+	API_WEEK_DAYS(2, "API权限", -1, null, -1, -1);
 	
 	private Integer typeId;
 	private String typeName;
@@ -13,11 +15,12 @@ public enum ServiceRights {
 	private Integer menuLevel;
 	private Integer parentMenuId;
 	
-	private ServiceRights(Integer typeId, String typeName, Integer menuId, String menuName, Integer parentMenuId) {
+	private ServiceRights(Integer typeId, String typeName, Integer menuId, String menuName, Integer menuLevel, Integer parentMenuId) {
 		this.typeId = typeId;
 		this.typeName = typeName;
 		this.menuId = menuId;
 		this.menuName = menuName;
+		this.menuLevel = menuLevel;
 		this.parentMenuId = parentMenuId;
 	}
 

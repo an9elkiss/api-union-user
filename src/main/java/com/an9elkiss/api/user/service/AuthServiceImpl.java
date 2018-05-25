@@ -19,10 +19,11 @@ import com.an9elkiss.api.user.constant.ApiStatus;
 import com.an9elkiss.api.user.constant.Role;
 import com.an9elkiss.api.user.constant.ServiceRights;
 import com.an9elkiss.api.user.dao.UserDao;
-import com.an9elkiss.commons.auth.MenuRights;
-import com.an9elkiss.commons.auth.Principal;
-import com.an9elkiss.commons.auth.Rights;
-import com.an9elkiss.commons.auth.User;
+import com.an9elkiss.commons.auth.model.ApiRights;
+import com.an9elkiss.commons.auth.model.MenuRights;
+import com.an9elkiss.commons.auth.model.Principal;
+import com.an9elkiss.commons.auth.model.Rights;
+import com.an9elkiss.commons.auth.model.User;
 import com.an9elkiss.commons.command.ApiResponseCmd;
 import com.an9elkiss.commons.constant.RedisKeyPrefix;
 import com.an9elkiss.commons.util.JsonUtils;
@@ -79,6 +80,13 @@ public class AuthServiceImpl implements AuthService {
 		for (ServiceRights rights : role.getRights()) {
 			if (rights.getTypeId() == MenuRights.TYPE_ID) {
 				MenuRights r = new MenuRights();
+				BeanUtils.copyProperties(rights, r);
+				r.setCode(rights.name());
+				r.setRoleId(role.getRoleId());
+				r.setRoleCode(role.name());
+				rightList.add(r);
+			} else if (rights.getTypeId() == ApiRights.TYPE_ID) {
+				ApiRights r = new ApiRights();
 				BeanUtils.copyProperties(rights, r);
 				r.setCode(rights.name());
 				r.setRoleId(role.getRoleId());

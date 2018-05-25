@@ -4,17 +4,20 @@ public enum Role {
 	ADMIN(1, new ServiceRights[] { ServiceRights.MENU_HOME,
 			ServiceRights.MENU_TIME_DOMINATOR,
 			ServiceRights.MENU_TIME_ENTRIES,
-			ServiceRights.MENU_TIME_ENTRY_CHART}),
+			ServiceRights.MENU_TIME_ENTRY_CHART,
+			ServiceRights.API_WEEK_DAYS}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
 			ServiceRights.MENU_TIME_DOMINATOR,
 			ServiceRights.MENU_TIME_ENTRIES,
-			ServiceRights.MENU_TIME_ENTRY_CHART}),
+			ServiceRights.MENU_TIME_ENTRY_CHART,
+			ServiceRights.API_WEEK_DAYS}),
 
 	APP_USER_TIME_DOMINATOR(101, new ServiceRights[] { ServiceRights.MENU_HOME,
 			ServiceRights.MENU_TIME_DOMINATOR,
 			ServiceRights.MENU_TIME_ENTRIES,
-			ServiceRights.MENU_TIME_ENTRY_CHART });
+			ServiceRights.MENU_TIME_ENTRY_CHART,
+			ServiceRights.API_WEEK_DAYS });
 	
 	private Integer roleId;
 	private ServiceRights[] rights;
