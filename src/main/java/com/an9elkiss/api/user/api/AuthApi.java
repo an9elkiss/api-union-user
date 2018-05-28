@@ -8,6 +8,7 @@ package com.an9elkiss.api.user.api;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.an9elkiss.api.user.command.MenusCmd;
 import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.commons.command.ApiResponseCmd;
 
@@ -18,5 +19,7 @@ public interface AuthApi {
 	ResponseEntity<ApiResponseCmd<TokenCmd>> login(
 			@RequestParam(value = "loginName", required = true) String loginName,
 			@RequestParam(value = "password", required = true) String password);
+
+	ResponseEntity<ApiResponseCmd<MenusCmd>> findMenus(@RequestParam(value = "token", required = true) String token);
 
 }

@@ -53,6 +53,30 @@
           }
         }
       }
+    },
+    "/menus" : {
+      "get" : {
+        "tags" : [ "auth" ],
+        "summary" : "Finds time entry by id",
+        "description" : "Finds time entry by id",
+        "operationId" : "findPetById",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "query",
+          "description" : "Query param",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          }
+        }
+      }
     }
   },
   "definitions" : {

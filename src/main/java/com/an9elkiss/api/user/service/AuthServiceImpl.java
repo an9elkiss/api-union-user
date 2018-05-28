@@ -13,12 +13,15 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.an9elkiss.api.user.command.MenuCmd;
+import com.an9elkiss.api.user.command.MenusCmd;
 import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.api.user.command.UserCmd;
 import com.an9elkiss.api.user.constant.ApiStatus;
 import com.an9elkiss.api.user.constant.Role;
 import com.an9elkiss.api.user.constant.ServiceRights;
 import com.an9elkiss.api.user.dao.UserDao;
+import com.an9elkiss.commons.auth.JsonFormater;
 import com.an9elkiss.commons.auth.model.ApiRights;
 import com.an9elkiss.commons.auth.model.MenuRights;
 import com.an9elkiss.commons.auth.model.Principal;
@@ -98,7 +101,27 @@ public class AuthServiceImpl implements AuthService {
 		return new Principal(user, rightList);
 	}
 
+	@Override
+	public ApiResponseCmd<MenusCmd> findMenus(String token) {
 
+		String json = redisUtils.getString(RedisKeyPrefix.SESSION + token);
+		if (StringUtils.isBlank(json)) {
+			return ApiResponseCmd.success(new MenusCmd());
+		}
+		Principal principal = JsonFormater.format(json);
+
+		MenusCmd menus = new MenusCmd();
+		for (Rights r : principal.getRights()) {
+			if (r instanceof MenuRights) {
+				MenuRights mr = (MenuRights) r;
+				MenuCmd menuCmd = new MenuCmd();
+				BeanUtils.copyProperties(mr, menuCmd);
+				menus.getMenus().add(menuCmd);
+			}
+		}
+
+		return ApiResponseCmd.success(menus);
+	}
 
 
 

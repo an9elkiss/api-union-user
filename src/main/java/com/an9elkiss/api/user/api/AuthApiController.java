@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.an9elkiss.api.user.command.MenusCmd;
 import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.api.user.service.AuthService;
 import com.an9elkiss.commons.command.ApiResponseCmd;
@@ -30,6 +31,14 @@ public class AuthApiController implements AuthApi {
 
 		return ResponseEntity.ok(authService.login(loginName, password));
     }
+
+	@Override
+	@RequestMapping(value = "/menus", produces = { "application/json" }, method = RequestMethod.GET)
+	public ResponseEntity<ApiResponseCmd<MenusCmd>> findMenus(
+			@RequestParam(value = "token", required = true) String token) {
+
+		return ResponseEntity.ok(authService.findMenus(token));
+	}
 
 
 }
