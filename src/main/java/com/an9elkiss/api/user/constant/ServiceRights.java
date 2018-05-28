@@ -6,7 +6,13 @@ public enum ServiceRights {
 	MENU_TIME_ENTRIES(1,"菜单权限", 102, "日程记录", 2, 101),
 	MENU_TIME_ENTRY_CHART(1, "菜单权限", 103, "日程报表", 2, 101),
 
-	API_WEEK_DAYS(2, "API权限", -1, null, -1, -1);
+	API_WEEK_DAYS(2, "API权限", -1, null, -1, -1),
+	API_TIME_ENTRY_NEW(2, "API权限", -1, null, -1, -1),
+	API_TIME_ENTRY_GET(2, "API权限", -1, null, -1, -1),
+	API_TIME_ENTRY_UPDATE(2, "API权限", -1, null, -1, -1),
+	API_TIME_ENTRY_DEL(2, "API权限", -1, null, -1, -1),
+	API_TIME_ENTRIES_GET(2, "API权限", -1, null, -1, -1),
+	API_TIME_ENTRIES_DAILY(2, "API权限", -1, null, -1, -1);
 	
 	private Integer typeId;
 	private String typeName;

@@ -5,6 +5,12 @@ public enum Role {
 			ServiceRights.MENU_TIME_DOMINATOR,
 			ServiceRights.MENU_TIME_ENTRIES,
 			ServiceRights.MENU_TIME_ENTRY_CHART,
+			ServiceRights.API_TIME_ENTRY_NEW,
+			ServiceRights.API_TIME_ENTRY_GET,
+			ServiceRights.API_TIME_ENTRY_UPDATE,
+			ServiceRights.API_TIME_ENTRY_DEL,
+			ServiceRights.API_TIME_ENTRIES_GET,
+			ServiceRights.API_TIME_ENTRIES_DAILY,
 			ServiceRights.API_WEEK_DAYS}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
