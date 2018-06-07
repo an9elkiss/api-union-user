@@ -67,6 +67,7 @@ public class AuthServiceImpl implements AuthService {
 		String json = JsonUtils.toString(principal);
 
 		TokenCmd tokenCmd = TokenCmd.random();
+		tokenCmd.setUserName(principal.getName());
 		redisUtils.setString(RedisKeyPrefix.SESSION + tokenCmd.getToken(), json, 60l, TimeUnit.MINUTES);
 
 		return ApiResponseCmd.success(tokenCmd);
