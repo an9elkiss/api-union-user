@@ -12,7 +12,21 @@ public enum ServiceRights {
 	API_TIME_ENTRY_UPDATE(2, "API权限", -1, null, -1, -1),
 	API_TIME_ENTRY_DEL(2, "API权限", -1, null, -1, -1),
 	API_TIME_ENTRIES_GET(2, "API权限", -1, null, -1, -1),
-	API_TIME_ENTRIES_DAILY(2, "API权限", -1, null, -1, -1);
+	API_TIME_ENTRIES_DAILY(2, "API权限", -1, null, -1, -1),
+	
+	API_TASKS_GET(2, "API权限", -1, null, -1, -1),
+	API_TASK_SAVE_POST(2, "API权限", -1, null, -1, -1),
+	API_TASK_UPDATE_POST(2, "API权限", -1, null, -1, -1),
+	API_TASK_GET(2, "API权限", -1, null, -1, -1),
+	API_TASK_PARENTS(2, "API权限", -1, null, -1, -1),
+	API_TASK_PARENT_RESOURCE(2, "API权限", -1, null, -1, -1),
+
+	API_COMMON_TYPE(2, "API权限", -1, null, -1, -1),
+	API_COMMON_YEAR_MONTH_WEEK(2, "API权限", -1, null, -1, -1),
+	API_COMMON_WEEK_COUNT(2, "API权限", -1, null, -1, -1),
+	
+	API_TASK_WEEK_DEL(2, "API权限", -1, null, -1, -1),
+	API_TASK_WEEK_COPY(2, "API权限", -1, null, -1, -1);
 	
 	private Integer typeId;
 	private String typeName;
