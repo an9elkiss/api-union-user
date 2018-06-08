@@ -17,6 +17,7 @@ import com.an9elkiss.api.user.command.MenuCmd;
 import com.an9elkiss.api.user.command.MenusCmd;
 import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.api.user.command.UserCmd;
+import com.an9elkiss.api.user.command.UserPersonCmd;
 import com.an9elkiss.api.user.constant.ApiStatus;
 import com.an9elkiss.api.user.constant.Role;
 import com.an9elkiss.api.user.constant.ServiceRights;
@@ -125,7 +126,58 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 
+	@Override
+	public ApiResponseCmd<List<UserPersonCmd>> findUserPersonCmd(String token) {
+		String json = redisUtils.getString(RedisKeyPrefix.SESSION + token);
+		if (StringUtils.isBlank(json)) {
+			return ApiResponseCmd.deny();
+		}
+		Principal principal = JsonFormater.format(json);
+		
+		// 查询全部用户
+		List<UserPersonCmd> findUserPerson = userDao.findUserPerson();
+		Map<Integer, UserPersonCmd> userPersonCmdMap = new HashMap<>();
+		
+		// leadid为key 下属为velue
+		Map<Integer, List<UserPersonCmd>> leadMap = new HashMap<>();
+		for (UserPersonCmd userPersonCmd : findUserPerson) {
+			userPersonCmdMap.put(userPersonCmd.getUserId(), userPersonCmd);	
+			if (leadMap.get(userPersonCmd.getLeadId()) != null) {
+				leadMap.get(userPersonCmd.getLeadId()).add(userPersonCmd);
+			}else{
+				leadMap.put(userPersonCmd.getLeadId(), new ArrayList<UserPersonCmd>(){{add(userPersonCmd);}});
+			}
+		}
+		
+		// 当前用户
+		UserPersonCmd currentUser = userPersonCmdMap.get(principal.getSubject().getId());
+		
+		// 该用户下属
+		List<UserPersonCmd> list = leadMap.get(currentUser.getUserId());
+		
+		// 表示他不是领导
+		if (list == null) {
+			return ApiResponseCmd.success(new ArrayList<UserPersonCmd>(){{add(currentUser);}});
+		}
+		
+		// 他是领导时
+		// 最终返回的list
+		List<UserPersonCmd> users = new ArrayList<>();
+		users.add(currentUser);
+		recursiveUserPerson(users, list, leadMap);
+		return ApiResponseCmd.success(users);
+	}
 
+
+	private void recursiveUserPerson(List<UserPersonCmd> users, List<UserPersonCmd> list, Map<Integer, List<UserPersonCmd>> leadMap){
+		users.addAll(list);
+		for (UserPersonCmd userPersonCmd : list) {
+			List<UserPersonCmd> listz = leadMap.get(userPersonCmd.getUserId());
+			if (null != listz && listz.size() > 0) {
+				recursiveUserPerson(users, listz, leadMap);
+			}
+		}
+	}
 
 
 }

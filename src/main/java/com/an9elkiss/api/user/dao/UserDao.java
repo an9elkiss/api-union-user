@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.an9elkiss.api.user.command.UserCmd;
+import com.an9elkiss.api.user.command.UserPersonCmd;
 
 @Mapper
 public interface UserDao {
@@ -13,4 +14,5 @@ public interface UserDao {
 
 	List<UserCmd> findUsers(Map<String, ?> searchParams);
 
+	List<UserPersonCmd> findUserPerson();
 }

@@ -27,4 +27,19 @@
 		</if>
 	</select>
 	
+	
+	<select id="findUserPerson" resultType="com.an9elkiss.api.user.command.UserPersonCmd">
+		SELECT
+			usr.id userId,
+			person.lead_id leadId,
+			person.level,
+			person.percent,
+			person.name
+		FROM
+			t_user usr,
+			t_person person
+		WHERE
+			usr.person_id = person.id
+	</select>
+	
 </mapper>

@@ -1,6 +1,8 @@
 package com.an9elkiss.api.user.api;
 
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.an9elkiss.api.user.command.MenusCmd;
 import com.an9elkiss.api.user.command.TokenCmd;
+import com.an9elkiss.api.user.command.UserPersonCmd;
 import com.an9elkiss.api.user.service.AuthService;
 import com.an9elkiss.commons.command.ApiResponseCmd;
 
@@ -40,5 +43,13 @@ public class AuthApiController implements AuthApi {
 		return ResponseEntity.ok(authService.findMenus(token));
 	}
 
+	
+	@Override
+	@RequestMapping(value = "/persons", produces = { "application/json" }, method = RequestMethod.GET)
+	public ResponseEntity<ApiResponseCmd<List<UserPersonCmd>>> findPersons(
+			@RequestParam(value = "token", required = true) String token) {
+
+		return ResponseEntity.ok(authService.findUserPersonCmd(token));
+	}
 
 }

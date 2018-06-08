@@ -1,7 +1,10 @@
 package com.an9elkiss.api.user.service;
 
+import java.util.List;
+
 import com.an9elkiss.api.user.command.MenusCmd;
 import com.an9elkiss.api.user.command.TokenCmd;
+import com.an9elkiss.api.user.command.UserPersonCmd;
 import com.an9elkiss.commons.command.ApiResponseCmd;
 
 public interface AuthService {
@@ -16,4 +19,10 @@ public interface AuthService {
 	ApiResponseCmd<MenusCmd> findMenus(String token);
 
 
+	/**
+	 * 返回當前token下属用户和下属用户的用户直到最下面
+	 * @param token
+	 * @return
+	 */
+	ApiResponseCmd<List<UserPersonCmd>> findUserPersonCmd(String token);
 }
