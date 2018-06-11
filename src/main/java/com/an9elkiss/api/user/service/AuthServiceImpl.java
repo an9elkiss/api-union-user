@@ -145,7 +145,9 @@ public class AuthServiceImpl implements AuthService {
 			if (leadMap.get(userPersonCmd.getLeadId()) != null) {
 				leadMap.get(userPersonCmd.getLeadId()).add(userPersonCmd);
 			}else{
-				leadMap.put(userPersonCmd.getLeadId(), new ArrayList<UserPersonCmd>(){{add(userPersonCmd);}});
+				List<UserPersonCmd> list = new ArrayList<UserPersonCmd>();
+				list.add(userPersonCmd);
+				leadMap.put(userPersonCmd.getLeadId(), list);
 			}
 		}
 		
@@ -157,7 +159,9 @@ public class AuthServiceImpl implements AuthService {
 		
 		// 表示他不是领导
 		if (list == null) {
-			return ApiResponseCmd.success(new ArrayList<UserPersonCmd>(){{add(currentUser);}});
+			list = new ArrayList<UserPersonCmd>();
+			list.add(currentUser);
+			return ApiResponseCmd.success(list);
 		}
 		
 		// 他是领导时
