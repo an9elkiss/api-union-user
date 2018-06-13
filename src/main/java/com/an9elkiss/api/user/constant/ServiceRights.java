@@ -5,6 +5,8 @@ public enum ServiceRights {
 	MENU_TIME_DOMINATOR(1,"菜单权限", 101, "时间管理", 1, 0),
 	MENU_TIME_ENTRIES(1,"菜单权限", 102, "日程记录", 2, 101),
 	MENU_TIME_ENTRY_CHART(1, "菜单权限", 103, "日程报表", 2, 101),
+	MENU_SUPER_MANAGER(1, "菜单权限", 201, "任务管理", 1, 0),
+	MENU_SUPERMNG_WEEK_TASKS(1, "菜单权限", 202, "一周任务", 2, 201),
 
 	API_WEEK_DAYS(2, "API权限", -1, null, -1, -1),
 	API_TIME_ENTRY_NEW(2, "API权限", -1, null, -1, -1),
