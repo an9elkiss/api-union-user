@@ -15,6 +15,8 @@ import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.api.user.command.UserPersonCmd;
 import com.an9elkiss.commons.command.ApiResponseCmd;
 
+import scala.annotation.varargs;
+
 
 
 public interface AuthApi {

@@ -22,7 +22,8 @@ public enum Role {
 			ServiceRights.API_COMMON_YEAR_MONTH_WEEK,
 			ServiceRights.API_COMMON_WEEK_COUNT,
 			ServiceRights.API_TASK_WEEK_DEL,
-			ServiceRights.API_TASK_WEEK_COPY}),
+			ServiceRights.API_TASK_WEEK_COPY,
+			ServiceRights.API_TASK_SAVE_TAG_POST}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
 			ServiceRights.MENU_TIME_DOMINATOR,

@@ -25,4 +25,5 @@ public interface AuthService {
 	 * @return
 	 */
 	ApiResponseCmd<List<UserPersonCmd>> findUserPersonCmd(String token);
+
 }

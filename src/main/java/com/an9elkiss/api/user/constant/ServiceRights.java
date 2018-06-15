@@ -26,7 +26,8 @@ public enum ServiceRights {
 	API_COMMON_WEEK_COUNT(2, "API权限", -1, null, -1, -1),
 	
 	API_TASK_WEEK_DEL(2, "API权限", -1, null, -1, -1),
-	API_TASK_WEEK_COPY(2, "API权限", -1, null, -1, -1);
+	API_TASK_WEEK_COPY(2, "API权限", -1, null, -1, -1),
+    API_TASK_SAVE_TAG_POST(2, "API权限", -1, null, -1, -1);
 	
 	private Integer typeId;
 	private String typeName;
