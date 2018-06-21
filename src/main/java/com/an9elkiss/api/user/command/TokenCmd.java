@@ -6,6 +6,7 @@ public class TokenCmd {
 
 	private String token;
 	private String userName;
+	private Integer id;
 
 	public String getToken() {
 		return token;
@@ -28,6 +29,14 @@ public class TokenCmd {
 		tokenCmd.setToken(UUID.randomUUID().toString());
 
 		return tokenCmd;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }
