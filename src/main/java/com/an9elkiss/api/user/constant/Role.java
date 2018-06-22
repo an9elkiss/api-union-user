@@ -27,7 +27,14 @@ public enum Role {
 			ServiceRights.API_COMMON_WEEK_COUNT,
 			ServiceRights.API_TASK_WEEK_DEL,
 			ServiceRights.API_TASK_WEEK_COPY,
-			ServiceRights.API_TASK_SAVE_TAG_POST}),
+			ServiceRights.API_TASK_SAVE_TAG_POST,
+			
+			
+			ServiceRights.API_CODE_REVIEW_CREATE,
+			ServiceRights.API_CODE_REVIEW_GET,
+			ServiceRights.API_CODE_REVIEW_INFO_GET,
+			ServiceRights.API_CODE_REVIEW_DELETE,
+			ServiceRights.API_CODE_REVIEW_UPDATE}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
 			ServiceRights.MENU_TIME_DOMINATOR,

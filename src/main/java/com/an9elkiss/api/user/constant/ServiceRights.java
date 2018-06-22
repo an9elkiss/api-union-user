@@ -29,7 +29,12 @@ public enum ServiceRights {
 	
 	API_TASK_WEEK_DEL(2, "API权限", -1, null, -1, -1),
 	API_TASK_WEEK_COPY(2, "API权限", -1, null, -1, -1),
-    API_TASK_SAVE_TAG_POST(2, "API权限", -1, null, -1, -1);
+    API_TASK_SAVE_TAG_POST(2, "API权限", -1, null, -1, -1),
+    API_CODE_REVIEW_INFO_GET(2, "API权限", -1, null, -1, -1),
+    API_CODE_REVIEW_DELETE(2, "API权限", -1, null, -1, -1),
+    API_CODE_REVIEW_UPDATE(2, "API权限", -1, null, -1, -1),
+    API_CODE_REVIEW_GET(2, "API权限", -1, null, -1, -1),
+	API_CODE_REVIEW_CREATE(2, "API权限", -1, null, -1, -1);
 	
 	private Integer typeId;
 	private String typeName;
