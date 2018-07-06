@@ -11,7 +11,9 @@ public enum ServiceRights {
 	MENU_SUPER_REPORT (1, "菜单权限", 301, "报表管理", 1, 0),
     MENU_SUPERMNG_WEEK_PLAN(1, "菜单权限", 302, "一周计划", 2, 301),
     MENU_SUPERMNG_CONTRIBUTION(1, "菜单权限", 303, "贡献值", 2, 301),
-    
+    MENU_SHARE(1, "菜单权限", 400, "培训分享", 1, 0),
+    MENU_SHARE_SAVE(1, "菜单权限", 401, "我要分享", 2, 401),
+    MENU_SHARE_SHOW(1, "菜单权限", 402, "分享列表", 2, 401),
 
 	API_WEEK_DAYS(2, "API权限", -1, null, -1, -1),
 	API_TIME_ENTRY_NEW(2, "API权限", -1, null, -1, -1),

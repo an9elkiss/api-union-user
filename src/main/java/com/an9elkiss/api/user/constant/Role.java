@@ -13,6 +13,10 @@ public enum Role {
 			ServiceRights.MENU_SUPERMNG_WEEK_PLAN,
 			ServiceRights.MENU_SUPERMNG_CONTRIBUTION,
 			
+			ServiceRights.MENU_SHARE,
+			ServiceRights.MENU_SHARE_SAVE,
+			ServiceRights.MENU_SHARE_SHOW,
+			
 			ServiceRights.API_TIME_ENTRY_NEW,
 			ServiceRights.API_TIME_ENTRY_GET,
 			ServiceRights.API_TIME_ENTRY_UPDATE,
@@ -68,6 +72,9 @@ public enum Role {
             ServiceRights.MENU_SUPER_REPORT,
             ServiceRights.MENU_SUPERMNG_WEEK_PLAN,
             ServiceRights.MENU_SUPERMNG_CONTRIBUTION,
+            ServiceRights.MENU_SHARE,
+			ServiceRights.MENU_SHARE_SAVE,
+			ServiceRights.MENU_SHARE_SHOW,
             
 			ServiceRights.API_TASKS_GET,
 			ServiceRights.API_TASK_SAVE_POST,
