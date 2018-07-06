@@ -39,7 +39,14 @@ public enum ServiceRights {
     API_CODE_REVIEW_DELETE(2, "API权限", -1, null, -1, -1),
     API_CODE_REVIEW_UPDATE(2, "API权限", -1, null, -1, -1),
     API_CODE_REVIEW_GET(2, "API权限", -1, null, -1, -1),
-	API_CODE_REVIEW_CREATE(2, "API权限", -1, null, -1, -1);
+	API_CODE_REVIEW_CREATE(2, "API权限", -1, null, -1, -1),
+	
+	API_SHARE_SAVE_POST(2, "API权限", -1, null, -1, -1),
+	API_SHARE_SHOW(2, "API权限", -1, null, -1, -1),
+	API_SHARECOMMENT(2, "API权限", -1, null, -1, -1),
+	API_FINDSHARECOMMENT(2, "API权限", -1, null, -1, -1),
+	API_SHAREPRAISE(2, "API权限", -1, null, -1, -1),
+	API_SHARE_DOWNLOADFILE(2, "API权限", -1, null, -1, -1);
 	
 	private Integer typeId;
 	private String typeName;

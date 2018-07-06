@@ -38,7 +38,15 @@ public enum Role {
 			ServiceRights.API_CODE_REVIEW_GET,
 			ServiceRights.API_CODE_REVIEW_INFO_GET,
 			ServiceRights.API_CODE_REVIEW_DELETE,
-			ServiceRights.API_CODE_REVIEW_UPDATE}),
+			ServiceRights.API_CODE_REVIEW_UPDATE,
+			
+			
+			ServiceRights.API_SHARE_SAVE_POST,
+			ServiceRights.API_SHARE_SHOW,
+			ServiceRights.API_SHARECOMMENT,
+			ServiceRights.API_FINDSHARECOMMENT,
+			ServiceRights.API_SHAREPRAISE,
+			ServiceRights.API_SHARE_DOWNLOADFILE}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
 			ServiceRights.MENU_TIME_DOMINATOR,
@@ -71,7 +79,14 @@ public enum Role {
 			ServiceRights.API_COMMON_YEAR_MONTH_WEEK,
 			ServiceRights.API_COMMON_WEEK_COUNT,
 			ServiceRights.API_TASK_WEEK_DEL,
-			ServiceRights.API_TASK_WEEK_COPY });
+			ServiceRights.API_TASK_WEEK_COPY,
+			
+			ServiceRights.API_SHARE_SAVE_POST,
+			ServiceRights.API_SHARE_SHOW,
+			ServiceRights.API_SHARECOMMENT,
+			ServiceRights.API_FINDSHARECOMMENT,
+			ServiceRights.API_SHAREPRAISE,
+			ServiceRights.API_SHARE_DOWNLOADFILE});
 	
 	private Integer roleId;
 	private ServiceRights[] rights;
