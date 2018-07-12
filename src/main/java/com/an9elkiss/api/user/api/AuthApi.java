@@ -28,5 +28,7 @@ public interface AuthApi {
 	ResponseEntity<ApiResponseCmd<MenusCmd>> findMenus(@RequestParam(value = "token", required = true) String token);
 
 	ResponseEntity<ApiResponseCmd<List<UserPersonCmd>>> findPersons(@RequestParam(value = "token", required = true) String token);
+	
+	ResponseEntity<ApiResponseCmd<List<UserPersonCmd>>> findAllPersons(@RequestParam(value = "token", required = true) String token);
 
 }

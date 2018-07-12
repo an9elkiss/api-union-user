@@ -52,4 +52,10 @@ public class AuthApiController implements AuthApi {
 		return ResponseEntity.ok(authService.findUserPersonCmd(token));
 	}
 
+	@Override
+	@RequestMapping(value = "/allPersons", produces = { "application/json" }, method = RequestMethod.GET)
+	public ResponseEntity<ApiResponseCmd<List<UserPersonCmd>>> findAllPersons(String token) {
+		return ResponseEntity.ok(authService.findAllPersonCmd(token));
+	}
+
 }

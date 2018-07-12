@@ -25,5 +25,13 @@ public interface AuthService {
 	 * @return
 	 */
 	ApiResponseCmd<List<UserPersonCmd>> findUserPersonCmd(String token);
+	
+	/**
+	 * 拿到所有人的信息
+	 * @param token
+	 * @return
+	 */
+	ApiResponseCmd<List<UserPersonCmd>> findAllPersonCmd(String token);
+	
 
 }

@@ -184,5 +184,18 @@ public class AuthServiceImpl implements AuthService {
 		}
 	}
 
+	@Override
+	public ApiResponseCmd<List<UserPersonCmd>> findAllPersonCmd(String token) {
+		String json = redisUtils.getString(RedisKeyPrefix.SESSION + token);
+		if (StringUtils.isBlank(json)) {
+			return ApiResponseCmd.deny();
+		}
+		Principal principal = JsonFormater.format(json);
+		
+		// 查询全部用户
+		List<UserPersonCmd> findUserPerson = userDao.findUserPerson();
+		return ApiResponseCmd.success(findUserPerson);
+	}
+
 
 }
