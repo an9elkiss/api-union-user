@@ -17,6 +17,9 @@ public enum Role {
 			ServiceRights.MENU_SHARE_SAVE,
 			ServiceRights.MENU_SHARE_SHOW,
 			
+			ServiceRights.MENU_FILETREE,
+			ServiceRights.MENU_FILETREE_SHOW,
+			
 			ServiceRights.API_TIME_ENTRY_NEW,
 			ServiceRights.API_TIME_ENTRY_GET,
 			ServiceRights.API_TIME_ENTRY_UPDATE,
@@ -50,7 +53,15 @@ public enum Role {
 			ServiceRights.API_SHARECOMMENT,
 			ServiceRights.API_FINDSHARECOMMENT,
 			ServiceRights.API_SHAREPRAISE,
-			ServiceRights.API_SHARE_DOWNLOADFILE}),
+			ServiceRights.API_SHARE_DOWNLOADFILE,
+			
+			ServiceRights.API_FILETREE_SAVE,
+			ServiceRights.API_FILETREE_FINDALL,
+			ServiceRights.API_FILETREE_FIND,
+			ServiceRights.API_FILETREE_DELETE,
+			ServiceRights.API_FILETREE_UPEATE,
+			ServiceRights.API_FILETREE_UPLOADFILE
+	}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
 			ServiceRights.MENU_TIME_DOMINATOR,
@@ -75,6 +86,9 @@ public enum Role {
             ServiceRights.MENU_SHARE,
 			ServiceRights.MENU_SHARE_SAVE,
 			ServiceRights.MENU_SHARE_SHOW,
+			ServiceRights.MENU_FILETREE,
+			ServiceRights.MENU_FILETREE_SHOW,
+			
             
 			ServiceRights.API_TASKS_GET,
 			ServiceRights.API_TASK_SAVE_POST,
@@ -93,7 +107,15 @@ public enum Role {
 			ServiceRights.API_SHARECOMMENT,
 			ServiceRights.API_FINDSHARECOMMENT,
 			ServiceRights.API_SHAREPRAISE,
-			ServiceRights.API_SHARE_DOWNLOADFILE});
+			ServiceRights.API_SHARE_DOWNLOADFILE,
+	
+			ServiceRights.API_FILETREE_SAVE,
+			ServiceRights.API_FILETREE_FINDALL,
+			ServiceRights.API_FILETREE_FIND,
+			ServiceRights.API_FILETREE_DELETE,
+			ServiceRights.API_FILETREE_UPEATE,
+			ServiceRights.API_FILETREE_UPLOADFILE
+	});
 	
 	private Integer roleId;
 	private ServiceRights[] rights;

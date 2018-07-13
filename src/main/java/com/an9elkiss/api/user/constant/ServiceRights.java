@@ -2,18 +2,26 @@ package com.an9elkiss.api.user.constant;
 
 public enum ServiceRights {
 	MENU_HOME(1,"菜单权限", 1, "首页", 1, 0),
+	
 	MENU_TIME_DOMINATOR(1,"菜单权限", 101, "时间管理", 1, 0),
 	MENU_TIME_ENTRIES(1,"菜单权限", 102, "日程记录", 2, 101),
 	MENU_TIME_ENTRY_CHART(1, "菜单权限", 103, "日程报表", 2, 101),
+	
 	MENU_SUPER_MANAGER(1, "菜单权限", 201, "任务管理", 1, 0),
 	MENU_SUPERMNG_WEEK_TASKS(1, "菜单权限", 202, "一周任务", 2, 201),
 	MENU_SUPERMNG_COED_REVIEW(1, "菜单权限", 203, "代码审核", 2, 201),
+	
 	MENU_SUPER_REPORT (1, "菜单权限", 301, "报表管理", 1, 0),
     MENU_SUPERMNG_WEEK_PLAN(1, "菜单权限", 302, "一周计划", 2, 301),
     MENU_SUPERMNG_CONTRIBUTION(1, "菜单权限", 303, "贡献值", 2, 301),
-    MENU_SHARE(1, "菜单权限", 400, "培训分享", 1, 0),
-    MENU_SHARE_SAVE(1, "菜单权限", 401, "我要分享", 2, 401),
-    MENU_SHARE_SHOW(1, "菜单权限", 402, "分享列表", 2, 401),
+    
+    MENU_SHARE(1, "菜单权限", 401, "培训分享", 1, 0),
+    MENU_SHARE_SAVE(1, "菜单权限", 402, "我要分享", 2, 401),
+    MENU_SHARE_SHOW(1, "菜单权限", 403, "分享列表", 2, 401),
+    
+    MENU_FILETREE(1, "菜单权限", 501, "文件管理", 1, 0),
+    MENU_FILETREE_SHOW(1, "菜单权限", 502, "文件列表", 2, 501),
+    
 
 	API_WEEK_DAYS(2, "API权限", -1, null, -1, -1),
 	API_TIME_ENTRY_NEW(2, "API权限", -1, null, -1, -1),
@@ -48,7 +56,15 @@ public enum ServiceRights {
 	API_SHARECOMMENT(2, "API权限", -1, null, -1, -1),
 	API_FINDSHARECOMMENT(2, "API权限", -1, null, -1, -1),
 	API_SHAREPRAISE(2, "API权限", -1, null, -1, -1),
-	API_SHARE_DOWNLOADFILE(2, "API权限", -1, null, -1, -1);
+	API_SHARE_DOWNLOADFILE(2, "API权限", -1, null, -1, -1),
+	
+	API_FILETREE_SAVE(2, "API权限", -1, null, -1, -1),
+	API_FILETREE_FINDALL(2, "API权限", -1, null, -1, -1),
+	API_FILETREE_FIND(2, "API权限", -1, null, -1, -1),
+	API_FILETREE_DELETE(2, "API权限", -1, null, -1, -1),
+	API_FILETREE_UPEATE(2, "API权限", -1, null, -1, -1),
+	API_FILETREE_UPLOADFILE(2, "API权限", -1, null, -1, -1);
+	
 	
 	private Integer typeId;
 	private String typeName;
