@@ -57,6 +57,9 @@ public enum ServiceRights {
 	API_FINDSHARECOMMENT(2, "API权限", -1, null, -1, -1),
 	API_SHAREPRAISE(2, "API权限", -1, null, -1, -1),
 	API_SHARE_DOWNLOADFILE(2, "API权限", -1, null, -1, -1),
+	API_SHARE_DELETE(2, "API权限", -1, null, -1, -1),
+	API_SHARE_UPDATE(2, "API权限", -1, null, -1, -1),
+	
 	
 	API_FILETREE_SAVE(2, "API权限", -1, null, -1, -1),
 	API_FILETREE_FINDALL(2, "API权限", -1, null, -1, -1),
