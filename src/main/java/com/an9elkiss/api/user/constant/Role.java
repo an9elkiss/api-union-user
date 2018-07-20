@@ -12,6 +12,7 @@ public enum Role {
 			ServiceRights.MENU_SUPER_REPORT,
 			ServiceRights.MENU_SUPERMNG_WEEK_PLAN,
 			ServiceRights.MENU_SUPERMNG_CONTRIBUTION,
+			ServiceRights.MENU_SUPERMNG_REPORT_MANAGEMENT,
 			
 			ServiceRights.MENU_SHARE,
 			ServiceRights.MENU_SHARE_SAVE,
@@ -39,14 +40,14 @@ public enum Role {
 			ServiceRights.API_TASK_WEEK_DEL,
 			ServiceRights.API_TASK_WEEK_COPY,
 			ServiceRights.API_TASK_SAVE_TAG_POST,
-			
+			ServiceRights.API_TASK_STATISTICAL_MAKE_BETTER,
 			
 			ServiceRights.API_CODE_REVIEW_CREATE,
 			ServiceRights.API_CODE_REVIEW_GET,
 			ServiceRights.API_CODE_REVIEW_INFO_GET,
 			ServiceRights.API_CODE_REVIEW_DELETE,
 			ServiceRights.API_CODE_REVIEW_UPDATE,
-			
+			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP,
 			
 			ServiceRights.API_SHARE_SAVE_POST,
 			ServiceRights.API_SHARE_SHOW,
@@ -56,6 +57,7 @@ public enum Role {
 			ServiceRights.API_SHARE_DOWNLOADFILE,
 			ServiceRights.API_SHARE_DELETE,
 			ServiceRights.API_SHARE_UPDATE,
+			ServiceRights.API_SHARE_STATISTICAL_GROUP,
 			
 			ServiceRights.API_FILETREE_SAVE,
 			ServiceRights.API_FILETREE_FINDALL,
@@ -85,6 +87,7 @@ public enum Role {
             ServiceRights.MENU_SUPER_REPORT,
             ServiceRights.MENU_SUPERMNG_WEEK_PLAN,
             ServiceRights.MENU_SUPERMNG_CONTRIBUTION,
+            ServiceRights.MENU_SUPERMNG_REPORT_MANAGEMENT,
             ServiceRights.MENU_SHARE,
 			ServiceRights.MENU_SHARE_SAVE,
 			ServiceRights.MENU_SHARE_SHOW,

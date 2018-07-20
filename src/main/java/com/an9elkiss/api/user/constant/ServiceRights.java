@@ -1,5 +1,7 @@
 package com.an9elkiss.api.user.constant;
 
+import com.an9elkiss.commons.auth.spring.Access;
+
 public enum ServiceRights {
 	MENU_HOME(1,"菜单权限", 1, "首页", 1, 0),
 	
@@ -14,6 +16,7 @@ public enum ServiceRights {
 	MENU_SUPER_REPORT (1, "菜单权限", 301, "报表管理", 1, 0),
     MENU_SUPERMNG_WEEK_PLAN(1, "菜单权限", 302, "一周计划", 2, 301),
     MENU_SUPERMNG_CONTRIBUTION(1, "菜单权限", 303, "贡献值", 2, 301),
+    MENU_SUPERMNG_REPORT_MANAGEMENT(1, "菜单权限", 304, "每月报表", 2, 301),
     
     MENU_SHARE(1, "菜单权限", 401, "培训分享", 1, 0),
     MENU_SHARE_SAVE(1, "菜单权限", 402, "我要分享", 2, 401),
@@ -37,7 +40,8 @@ public enum ServiceRights {
 	API_TASK_GET(2, "API权限", -1, null, -1, -1),
 	API_TASK_PARENTS(2, "API权限", -1, null, -1, -1),
 	API_TASK_PARENT_RESOURCE(2, "API权限", -1, null, -1, -1),
-
+	API_TASK_STATISTICAL_MAKE_BETTER(2, "API权限", -1, null, -1, -1),
+	
 	API_COMMON_TYPE(2, "API权限", -1, null, -1, -1),
 	API_COMMON_YEAR_MONTH_WEEK(2, "API权限", -1, null, -1, -1),
 	API_COMMON_WEEK_COUNT(2, "API权限", -1, null, -1, -1),
@@ -50,6 +54,7 @@ public enum ServiceRights {
     API_CODE_REVIEW_UPDATE(2, "API权限", -1, null, -1, -1),
     API_CODE_REVIEW_GET(2, "API权限", -1, null, -1, -1),
 	API_CODE_REVIEW_CREATE(2, "API权限", -1, null, -1, -1),
+	API_CODE_REVIEW_STATISTICAL_GROUP(2, "API权限", -1, null, -1, -1),
 	
 	API_SHARE_SAVE_POST(2, "API权限", -1, null, -1, -1),
 	API_SHARE_SHOW(2, "API权限", -1, null, -1, -1),
@@ -59,7 +64,7 @@ public enum ServiceRights {
 	API_SHARE_DOWNLOADFILE(2, "API权限", -1, null, -1, -1),
 	API_SHARE_DELETE(2, "API权限", -1, null, -1, -1),
 	API_SHARE_UPDATE(2, "API权限", -1, null, -1, -1),
-	
+	API_SHARE_STATISTICAL_GROUP(2, "API权限", -1, null, -1, -1),
 	
 	API_FILETREE_SAVE(2, "API权限", -1, null, -1, -1),
 	API_FILETREE_FINDALL(2, "API权限", -1, null, -1, -1),
