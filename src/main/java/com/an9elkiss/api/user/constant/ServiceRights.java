@@ -1,7 +1,5 @@
 package com.an9elkiss.api.user.constant;
 
-import com.an9elkiss.commons.auth.spring.Access;
-
 public enum ServiceRights {
 	MENU_HOME(1,"菜单权限", 1, "首页", 1, 0),
 	
@@ -16,7 +14,7 @@ public enum ServiceRights {
 	MENU_SUPER_REPORT (1, "菜单权限", 301, "报表管理", 1, 0),
     MENU_SUPERMNG_WEEK_PLAN(1, "菜单权限", 302, "一周计划", 2, 301),
     MENU_SUPERMNG_CONTRIBUTION(1, "菜单权限", 303, "贡献值", 2, 301),
-    MENU_SUPERMNG_REPORT_MANAGEMENT(1, "菜单权限", 304, "每月报表", 2, 301),
+    MENU_SUPERMNG_REPORT_MANAGEMENT(1, "菜单权限", 304, "团队管理", 2, 301),
     
     MENU_SHARE(1, "菜单权限", 401, "培训分享", 1, 0),
     MENU_SHARE_SAVE(1, "菜单权限", 402, "我要分享", 2, 401),
