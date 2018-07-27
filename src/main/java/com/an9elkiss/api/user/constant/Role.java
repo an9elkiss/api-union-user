@@ -48,6 +48,7 @@ public enum Role {
 			ServiceRights.API_CODE_REVIEW_DELETE,
 			ServiceRights.API_CODE_REVIEW_UPDATE,
 			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP,
+			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP_INFO,
 			
 			ServiceRights.API_SHARE_SAVE_POST,
 			ServiceRights.API_SHARE_SHOW,
@@ -106,6 +107,7 @@ public enum Role {
 			ServiceRights.API_COMMON_WEEK_COUNT,
 			ServiceRights.API_TASK_WEEK_DEL,
 			ServiceRights.API_TASK_WEEK_COPY,
+			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP_INFO,
 			
 			ServiceRights.API_SHARE_SAVE_POST,
 			ServiceRights.API_SHARE_SHOW,

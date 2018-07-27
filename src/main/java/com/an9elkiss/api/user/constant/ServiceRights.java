@@ -53,6 +53,7 @@ public enum ServiceRights {
     API_CODE_REVIEW_GET(2, "API权限", -1, null, -1, -1),
 	API_CODE_REVIEW_CREATE(2, "API权限", -1, null, -1, -1),
 	API_CODE_REVIEW_STATISTICAL_GROUP(2, "API权限", -1, null, -1, -1),
+	API_CODE_REVIEW_STATISTICAL_GROUP_INFO(2, "API权限", -1, null, -1, -1),
 	
 	API_SHARE_SAVE_POST(2, "API权限", -1, null, -1, -1),
 	API_SHARE_SHOW(2, "API权限", -1, null, -1, -1),
