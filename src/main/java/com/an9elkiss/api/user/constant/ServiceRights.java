@@ -39,6 +39,7 @@ public enum ServiceRights {
 	API_TASK_PARENTS(2, "API权限", -1, null, -1, -1),
 	API_TASK_PARENT_RESOURCE(2, "API权限", -1, null, -1, -1),
 	API_TASK_STATISTICAL_MAKE_BETTER(2, "API权限", -1, null, -1, -1),
+	API_TASK_STATISTICAL_MAKE_BETTER_INFO(2, "API权限", -1, null, -1, -1),
 	
 	API_COMMON_TYPE(2, "API权限", -1, null, -1, -1),
 	API_COMMON_YEAR_MONTH_WEEK(2, "API权限", -1, null, -1, -1),

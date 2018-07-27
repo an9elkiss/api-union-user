@@ -41,6 +41,7 @@ public enum Role {
 			ServiceRights.API_TASK_WEEK_COPY,
 			ServiceRights.API_TASK_SAVE_TAG_POST,
 			ServiceRights.API_TASK_STATISTICAL_MAKE_BETTER,
+			ServiceRights.API_TASK_STATISTICAL_MAKE_BETTER_INFO,
 			
 			ServiceRights.API_CODE_REVIEW_CREATE,
 			ServiceRights.API_CODE_REVIEW_GET,
@@ -108,6 +109,7 @@ public enum Role {
 			ServiceRights.API_COMMON_WEEK_COUNT,
 			ServiceRights.API_TASK_WEEK_DEL,
 			ServiceRights.API_TASK_WEEK_COPY,
+			ServiceRights.API_TASK_STATISTICAL_MAKE_BETTER_INFO,
 			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP_INFO,
 			
 			ServiceRights.API_SHARE_SAVE_POST,
