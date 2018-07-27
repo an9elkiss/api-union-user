@@ -64,6 +64,7 @@ public enum ServiceRights {
 	API_SHARE_DELETE(2, "API权限", -1, null, -1, -1),
 	API_SHARE_UPDATE(2, "API权限", -1, null, -1, -1),
 	API_SHARE_STATISTICAL_GROUP(2, "API权限", -1, null, -1, -1),
+	API_SHARE_STATISTICAL_GROUP_INFO(2, "API权限", -1, null, -1, -1),
 	
 	API_FILETREE_SAVE(2, "API权限", -1, null, -1, -1),
 	API_FILETREE_FINDALL(2, "API权限", -1, null, -1, -1),

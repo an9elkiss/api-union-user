@@ -59,6 +59,7 @@ public enum Role {
 			ServiceRights.API_SHARE_DELETE,
 			ServiceRights.API_SHARE_UPDATE,
 			ServiceRights.API_SHARE_STATISTICAL_GROUP,
+			ServiceRights.API_SHARE_STATISTICAL_GROUP_INFO,
 			
 			ServiceRights.API_FILETREE_SAVE,
 			ServiceRights.API_FILETREE_FINDALL,
@@ -117,7 +118,8 @@ public enum Role {
 			ServiceRights.API_SHARE_DOWNLOADFILE,
 			ServiceRights.API_SHARE_DELETE,
 			ServiceRights.API_SHARE_UPDATE,
-	
+			ServiceRights.API_SHARE_STATISTICAL_GROUP_INFO,
+			
 			ServiceRights.API_FILETREE_SAVE,
 			ServiceRights.API_FILETREE_FINDALL,
 			ServiceRights.API_FILETREE_FIND,
