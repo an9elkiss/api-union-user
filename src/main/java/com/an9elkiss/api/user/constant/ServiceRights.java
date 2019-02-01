@@ -10,6 +10,7 @@ public enum ServiceRights {
 	MENU_SUPER_MANAGER(1, "菜单权限", 201, "任务管理", 1, 0),
 	MENU_SUPERMNG_WEEK_TASKS(1, "菜单权限", 202, "一周任务", 2, 201),
 	MENU_SUPERMNG_COED_REVIEW(1, "菜单权限", 203, "代码审核", 2, 201),
+	MENU_SUPERMNG_TASK_PLAN(1, "菜单权限", 204, "任务计划", 2, 201),
 	
 	MENU_SUPER_REPORT (1, "菜单权限", 301, "报表管理", 1, 0),
     MENU_SUPERMNG_WEEK_PLAN(1, "菜单权限", 302, "一周计划", 2, 301),
@@ -72,7 +73,22 @@ public enum ServiceRights {
 	API_FILETREE_FIND(2, "API权限", -1, null, -1, -1),
 	API_FILETREE_DELETE(2, "API权限", -1, null, -1, -1),
 	API_FILETREE_UPEATE(2, "API权限", -1, null, -1, -1),
-	API_FILETREE_UPLOADFILE(2, "API权限", -1, null, -1, -1);
+	API_FILETREE_UPLOADFILE(2, "API权限", -1, null, -1, -1),
+	
+	API_SAVE_PROJECTPLANTRACKING(2, "API权限", -1, null, -1, -1),
+	API_UPDATE_PROJECTPLANTRACKING(2, "API权限", -1, null, -1, -1),
+	API_DELETE_PROJECTPLANTRACKING(2, "API权限", -1, null, -1, -1),
+	API_FIND_PROJECTPLANTRACKINGS(2, "API权限", -1, null, -1, -1),
+	API_FIND_PROJECTPLANTRACKINGCMDS(2, "API权限", -1, null, -1, -1),
+	API_SAVE_PROJECTPLANPHASE(2, "API权限", -1, null, -1, -1),
+	API_UPDATE_PROJECTPLANPHASE(2, "API权限", -1, null, -1, -1),
+	API_DELETE_PROJECTPLANPHASE(2, "API权限", -1, null, -1, -1),
+	API_SAVE_PROJECTPLANPHASECHECK(2, "API权限", -1, null, -1, -1),
+	API_UPDATE_PROJECTPLANPHASECHECK(2, "API权限", -1, null, -1, -1),
+	API_DELETE_PROJECTPLANPHASECHECK(2, "API权限", -1, null, -1, -1),
+	
+	
+	;
 	
 	
 	private Integer typeId;

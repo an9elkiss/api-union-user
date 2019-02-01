@@ -9,6 +9,8 @@ public enum Role {
 			ServiceRights.MENU_SUPER_MANAGER,
 			ServiceRights.MENU_SUPERMNG_WEEK_TASKS,
 			ServiceRights.MENU_SUPERMNG_COED_REVIEW,
+			ServiceRights.MENU_SUPERMNG_TASK_PLAN,
+			
 			ServiceRights.MENU_SUPER_REPORT,
 			ServiceRights.MENU_SUPERMNG_WEEK_PLAN,
 			ServiceRights.MENU_SUPERMNG_CONTRIBUTION,
@@ -67,7 +69,19 @@ public enum Role {
 			ServiceRights.API_FILETREE_FIND,
 			ServiceRights.API_FILETREE_DELETE,
 			ServiceRights.API_FILETREE_UPEATE,
-			ServiceRights.API_FILETREE_UPLOADFILE
+			ServiceRights.API_FILETREE_UPLOADFILE,
+			
+			ServiceRights.API_SAVE_PROJECTPLANTRACKING,
+			ServiceRights.API_UPDATE_PROJECTPLANTRACKING,
+			ServiceRights.API_DELETE_PROJECTPLANTRACKING,
+			ServiceRights.API_FIND_PROJECTPLANTRACKINGS,
+			ServiceRights.API_FIND_PROJECTPLANTRACKINGCMDS,
+			ServiceRights.API_SAVE_PROJECTPLANPHASE,
+			ServiceRights.API_UPDATE_PROJECTPLANPHASE,
+			ServiceRights.API_DELETE_PROJECTPLANPHASE,
+			ServiceRights.API_SAVE_PROJECTPLANPHASECHECK,
+			ServiceRights.API_UPDATE_PROJECTPLANPHASECHECK,
+			ServiceRights.API_DELETE_PROJECTPLANPHASECHECK,
 	}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
@@ -87,6 +101,8 @@ public enum Role {
 			ServiceRights.MENU_SUPERMNG_WEEK_TASKS,
 			ServiceRights.MENU_TIME_ENTRY_CHART,
 			ServiceRights.MENU_SUPERMNG_COED_REVIEW,
+			ServiceRights.MENU_SUPERMNG_TASK_PLAN,
+			
             ServiceRights.MENU_SUPER_REPORT,
             ServiceRights.MENU_SUPERMNG_WEEK_PLAN,
             ServiceRights.MENU_SUPERMNG_CONTRIBUTION,
@@ -127,7 +143,19 @@ public enum Role {
 			ServiceRights.API_FILETREE_FIND,
 			ServiceRights.API_FILETREE_DELETE,
 			ServiceRights.API_FILETREE_UPEATE,
-			ServiceRights.API_FILETREE_UPLOADFILE
+			ServiceRights.API_FILETREE_UPLOADFILE,
+			
+			ServiceRights.API_SAVE_PROJECTPLANTRACKING,
+            ServiceRights.API_UPDATE_PROJECTPLANTRACKING,
+            ServiceRights.API_DELETE_PROJECTPLANTRACKING,
+            ServiceRights.API_FIND_PROJECTPLANTRACKINGS,
+            ServiceRights.API_FIND_PROJECTPLANTRACKINGCMDS,
+            ServiceRights.API_SAVE_PROJECTPLANPHASE,
+            ServiceRights.API_UPDATE_PROJECTPLANPHASE,
+            ServiceRights.API_DELETE_PROJECTPLANPHASE,
+            ServiceRights.API_SAVE_PROJECTPLANPHASECHECK,
+            ServiceRights.API_UPDATE_PROJECTPLANPHASECHECK,
+            ServiceRights.API_DELETE_PROJECTPLANPHASECHECK,
 	});
 	
 	private Integer roleId;
