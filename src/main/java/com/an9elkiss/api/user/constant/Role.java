@@ -10,6 +10,7 @@ public enum Role {
 			ServiceRights.MENU_SUPERMNG_WEEK_TASKS,
 			ServiceRights.MENU_SUPERMNG_COED_REVIEW,
 			ServiceRights.MENU_SUPERMNG_TASK_PLAN,
+			ServiceRights.MENU_SUPERMNG_TASK_DOCUMENT_TREE,
 			
 			ServiceRights.MENU_SUPER_REPORT,
 			ServiceRights.MENU_SUPERMNG_WEEK_PLAN,
@@ -52,6 +53,7 @@ public enum Role {
 			ServiceRights.API_CODE_REVIEW_UPDATE,
 			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP,
 			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP_INFO,
+			ServiceRights.API_CODE_REVIEW_ID_GET,
 			
 			ServiceRights.API_SHARE_SAVE_POST,
 			ServiceRights.API_SHARE_SHOW,
@@ -82,6 +84,8 @@ public enum Role {
 			ServiceRights.API_SAVE_PROJECTPLANPHASECHECK,
 			ServiceRights.API_UPDATE_PROJECTPLANPHASECHECK,
 			ServiceRights.API_DELETE_PROJECTPLANPHASECHECK,
+			
+			ServiceRights.API_DOCUMENT_TREES,
 	}),
 
 	DEFAULT(2, new ServiceRights[] { ServiceRights.MENU_HOME,
@@ -112,7 +116,7 @@ public enum Role {
 			ServiceRights.MENU_SHARE_SHOW,
 			ServiceRights.MENU_FILETREE,
 			ServiceRights.MENU_FILETREE_SHOW,
-			
+			ServiceRights.MENU_SUPERMNG_TASK_DOCUMENT_TREE,
             
 			ServiceRights.API_TASKS_GET,
 			ServiceRights.API_TASK_SAVE_POST,
@@ -127,6 +131,7 @@ public enum Role {
 			ServiceRights.API_TASK_WEEK_COPY,
 			ServiceRights.API_TASK_STATISTICAL_MAKE_BETTER_INFO,
 			ServiceRights.API_CODE_REVIEW_STATISTICAL_GROUP_INFO,
+			ServiceRights.API_CODE_REVIEW_ID_GET,
 			
 			ServiceRights.API_SHARE_SAVE_POST,
 			ServiceRights.API_SHARE_SHOW,
@@ -156,6 +161,8 @@ public enum Role {
             ServiceRights.API_SAVE_PROJECTPLANPHASECHECK,
             ServiceRights.API_UPDATE_PROJECTPLANPHASECHECK,
             ServiceRights.API_DELETE_PROJECTPLANPHASECHECK,
+            
+            ServiceRights.API_DOCUMENT_TREES,
 	});
 	
 	private Integer roleId;

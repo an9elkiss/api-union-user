@@ -1,5 +1,7 @@
 package com.an9elkiss.api.user.constant;
 
+import com.an9elkiss.commons.auth.spring.Access;
+
 public enum ServiceRights {
 	MENU_HOME(1,"菜单权限", 1, "首页", 1, 0),
 	
@@ -11,6 +13,7 @@ public enum ServiceRights {
 	MENU_SUPERMNG_WEEK_TASKS(1, "菜单权限", 202, "一周任务", 2, 201),
 	MENU_SUPERMNG_COED_REVIEW(1, "菜单权限", 203, "代码审核", 2, 201),
 	MENU_SUPERMNG_TASK_PLAN(1, "菜单权限", 204, "任务计划", 2, 201),
+	MENU_SUPERMNG_TASK_DOCUMENT_TREE(1, "菜单权限", 205, "任务计划", 2, 201),
 	
 	MENU_SUPER_REPORT (1, "菜单权限", 301, "报表管理", 1, 0),
     MENU_SUPERMNG_WEEK_PLAN(1, "菜单权限", 302, "一周计划", 2, 301),
@@ -56,6 +59,7 @@ public enum ServiceRights {
 	API_CODE_REVIEW_CREATE(2, "API权限", -1, null, -1, -1),
 	API_CODE_REVIEW_STATISTICAL_GROUP(2, "API权限", -1, null, -1, -1),
 	API_CODE_REVIEW_STATISTICAL_GROUP_INFO(2, "API权限", -1, null, -1, -1),
+	API_CODE_REVIEW_ID_GET(2, "API权限", -1, null, -1, -1),
 	
 	API_SHARE_SAVE_POST(2, "API权限", -1, null, -1, -1),
 	API_SHARE_SHOW(2, "API权限", -1, null, -1, -1),
@@ -87,7 +91,8 @@ public enum ServiceRights {
 	API_UPDATE_PROJECTPLANPHASECHECK(2, "API权限", -1, null, -1, -1),
 	API_DELETE_PROJECTPLANPHASECHECK(2, "API权限", -1, null, -1, -1),
 	
-	
+	// 文档树权限
+	API_DOCUMENT_TREES(2, "API权限", -1, null, -1, -1),
 	;
 	
 	
