@@ -33,5 +33,14 @@ public interface AuthService {
 	 */
 	ApiResponseCmd<List<UserPersonCmd>> findAllPersonCmd(String token);
 	
-
+	/**
+     * 重置密码
+     * @param oldPassword 旧密码
+     * @param newPassword 新密码
+     * @param repeatNewPassword 再次输入的新密码
+     * @param token 用户令牌
+     * @return
+     */
+    ApiResponseCmd<Object> resetPassword(String oldPassword,String newPassword,String repeatNewPassword,String token);
+	
 }

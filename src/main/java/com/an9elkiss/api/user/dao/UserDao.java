@@ -9,10 +9,17 @@ import com.an9elkiss.api.user.command.UserCmd;
 import com.an9elkiss.api.user.command.UserPersonCmd;
 
 @Mapper
-public interface UserDao {
+public interface UserDao{
 
+    List<UserCmd> findUsers(Map<String, ?> searchParams);
 
-	List<UserCmd> findUsers(Map<String, ?> searchParams);
+    List<UserPersonCmd> findUserPerson();
 
-	List<UserPersonCmd> findUserPerson();
+    /**
+     * 更新用户密码
+     * 
+     * @param userCmd
+     * @return
+     */
+    int updatePassword(UserCmd userCmd);
 }

@@ -15,8 +15,6 @@ import com.an9elkiss.api.user.command.TokenCmd;
 import com.an9elkiss.api.user.command.UserPersonCmd;
 import com.an9elkiss.commons.command.ApiResponseCmd;
 
-import scala.annotation.varargs;
-
 
 
 public interface AuthApi {
@@ -24,6 +22,16 @@ public interface AuthApi {
 	ResponseEntity<ApiResponseCmd<TokenCmd>> login(
 			@RequestParam(value = "loginName", required = true) String loginName,
 			@RequestParam(value = "password", required = true) String password);
+	
+	/**
+	 * 重置密码
+	 * @param oldPassword 旧密码
+	 * @param newPassword 新密码
+	 * @param repeatNewPassword 再次输入的新密码
+	 * @param token 用户令牌
+	 * @return
+	 */
+	ResponseEntity<ApiResponseCmd<Object>> resetPassword(String oldPassword,String newPassword,String repeatNewPassword,String token);
 
 	ResponseEntity<ApiResponseCmd<MenusCmd>> findMenus(@RequestParam(value = "token", required = true) String token);
 

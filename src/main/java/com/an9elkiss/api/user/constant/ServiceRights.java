@@ -1,7 +1,5 @@
 package com.an9elkiss.api.user.constant;
 
-import com.an9elkiss.commons.auth.spring.Access;
-
 public enum ServiceRights {
 	MENU_HOME(1,"菜单权限", 1, "首页", 1, 0),
 	
@@ -28,6 +26,8 @@ public enum ServiceRights {
     MENU_FILETREE_SHOW(1, "菜单权限", 502, "文件列表", 2, 501),
     
 
+    API_RESET_PASSWORD(2, "API权限", -1, null, -1, -1),
+    
 	API_WEEK_DAYS(2, "API权限", -1, null, -1, -1),
 	API_TIME_ENTRY_NEW(2, "API权限", -1, null, -1, -1),
 	API_TIME_ENTRY_GET(2, "API权限", -1, null, -1, -1),

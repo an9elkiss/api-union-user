@@ -42,4 +42,11 @@
 			usr.person_id = person.id
 	</select>
 	
+	<update id="updatePassword" parameterType="userCmd">
+			UPDATE t_user 
+			SET password = #{password}
+			where id=#{id}
+	</update>
+	
+	
 </mapper>

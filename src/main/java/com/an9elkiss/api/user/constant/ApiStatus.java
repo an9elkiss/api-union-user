@@ -17,7 +17,12 @@ public enum ApiStatus implements Status {
 	
 	// --User API----------------------------
 	USER_NAME_OR_PASSWORD_EMPTY(500101, "用户名或密码为空！"),
-	LOGIN_FAIL(500102, "用户名或密码错误..."),;
+	LOGIN_FAIL(500102, "用户名或密码错误..."),
+	RESET_PASSWORD_OLD_PASSWORD_ERR(500103, "旧密码错误"),
+	RESET_PASSWORD_LESS_THAN_SIX(500104, "密码必须大于6位"),
+	RESET_PASSWORD_ERR(500105, "修改密码异常"),
+	RESET_PASSWORD_NEW_PASSWORD_DIFFERENT(500106, "新密码与第二次输入的密码不同"),
+	;
 	
 	private Integer code;
 	private String message;

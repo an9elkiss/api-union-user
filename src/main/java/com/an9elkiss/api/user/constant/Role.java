@@ -24,6 +24,8 @@ public enum Role {
 			ServiceRights.MENU_FILETREE,
 			ServiceRights.MENU_FILETREE_SHOW,
 			
+			ServiceRights.API_RESET_PASSWORD,
+			
 			ServiceRights.API_TIME_ENTRY_NEW,
 			ServiceRights.API_TIME_ENTRY_GET,
 			ServiceRights.API_TIME_ENTRY_UPDATE,
@@ -118,6 +120,8 @@ public enum Role {
 			ServiceRights.MENU_FILETREE_SHOW,
 			ServiceRights.MENU_SUPERMNG_TASK_DOCUMENT_TREE,
             
+			ServiceRights.API_RESET_PASSWORD,
+			
 			ServiceRights.API_TASKS_GET,
 			ServiceRights.API_TASK_SAVE_POST,
 			ServiceRights.API_TASK_UPDATE_POST,

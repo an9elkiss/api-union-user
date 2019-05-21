@@ -10,15 +10,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.filter.HttpPutFormContentFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import com.an9elkiss.commons.auth.spring.AuthInterceptor;
 
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-		"com.an9elkiss.api.user.api, com.an9elkiss.api.user.service, com.an9elkiss.commons.util.spring" })
+		"com.an9elkiss.api.user.api, com.an9elkiss.commons.auth.spring , com.an9elkiss.api.user.service, com.an9elkiss.commons.util.spring" })
 @MapperScan("com.an9elkiss.api.user.dao")
-public class UnionUserApiBoot implements CommandLineRunner {
+public class UnionUserApiBoot extends WebMvcConfigurerAdapter implements CommandLineRunner {
 
     @Override
     public void run(String... arg0) throws Exception {
@@ -41,7 +44,16 @@ public class UnionUserApiBoot implements CommandLineRunner {
 
     }
     
-
+    @Bean
+    public AuthInterceptor authInterceptor() {
+        return new AuthInterceptor();
+    }
+    
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(authInterceptor()).addPathPatterns("/reset/password");
+    }
+    
 	/**
 	 * 实现封装PUT请求的From体至Command
 	 * @return
