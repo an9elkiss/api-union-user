@@ -42,7 +42,7 @@
 			usr.person_id = person.id
 	</select>
 	
-	<update id="updatePassword" parameterType="userCmd">
+	<update id="updatePassword" parameterType="com.an9elkiss.api.user.command.UserCmd">
 			UPDATE t_user 
 			SET password = #{password}
 			where id=#{id}
