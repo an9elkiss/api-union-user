@@ -23,6 +23,7 @@ import com.an9elkiss.api.user.constant.Role;
 import com.an9elkiss.api.user.constant.ServiceRights;
 import com.an9elkiss.api.user.dao.UserDao;
 import com.an9elkiss.api.user.util.MD5Utils;
+import com.an9elkiss.api.user.util.PasswordRegularMatchUtils;
 import com.an9elkiss.commons.auth.JsonFormater;
 import com.an9elkiss.commons.auth.model.ApiRights;
 import com.an9elkiss.commons.auth.model.MenuRights;
@@ -206,6 +207,11 @@ public class AuthServiceImpl implements AuthService{
         if (!newPassword.equals(repeatNewPassword)){
             logger.info("新密码与第二次输入的密码不同");
             return new ApiResponseCmd<>(ApiStatus.RESET_PASSWORD_NEW_PASSWORD_DIFFERENT);
+        }
+        
+        if(!PasswordRegularMatchUtils.regularMatchPassword(newPassword)){
+            logger.info("新密码不符合复杂度校验");
+            return new ApiResponseCmd<>(ApiStatus.RESET_PASSWORD_REGULAR_MATCH);
         }
 
         String oldPasswordMD5 = MD5Utils.md5DigestAsHex(oldPassword);
